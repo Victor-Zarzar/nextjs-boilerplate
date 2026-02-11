@@ -101,7 +101,7 @@ bunx create-next-app my-app --example https://github.com/Victor-Zarzar/nextjs-bo
 **Using npm:**
 
 ```bash
-npx create-next-app my-app --example "https://github.com/Victor-Zarzar/nextjs-boilerplate"
+npx create-next-app my-app --example https://github.com/Victor-Zarzar/nextjs-boilerplate
 ```
 
 > **Important:** If using npm, you'll need to update the `package.json` scripts after installation:
