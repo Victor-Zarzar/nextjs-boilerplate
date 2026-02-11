@@ -1,9 +1,10 @@
 "use client";
-
-import { Menu, X } from "lucide-react";
+import { LanguagesIcon, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
+import LangToggler from "@/components/language-selector/language-selector";
+import ToggleButton from "@/components/toggle-mode/toggle-mode";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -23,7 +24,17 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 w-full border-b border-gray-200 dark:border-stone-800 bg-white/80 dark:bg-stone-950/80 backdrop-blur-md">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center space-x-2 group">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-stone-900 transition-colors"
+          >
+            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+
+          <Link
+            href="/"
+            className="hidden md:flex items-center space-x-2 group"
+          >
             <div className="w-9 h-9 rounded-lg bg-linear-to-br from-blue-600 to-purple-600 flex items-center justify-center transform group-hover:scale-105 transition-transform duration-200">
               <span className="text-white font-bold text-lg">N</span>
             </div>
@@ -44,24 +55,16 @@ export default function Navbar() {
             ))}
           </div>
 
-          <div className="hidden md:flex items-center space-x-3">
-            <Button
-              variant="ghost"
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
-            >
-              {t("login")}
-            </Button>
-            <Button className="bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white dark:text-gray-900 shadow-md hover:shadow-lg transition-all duration-200">
-              {t("getStarted")}
-            </Button>
+          <div className="flex items-center space-x-3">
+            <LangToggler
+              trigger={
+                <Button variant="outline" size="icon" type="button">
+                  <LanguagesIcon />
+                </Button>
+              }
+            />
+            <ToggleButton />
           </div>
-
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-stone-900 transition-colors"
-          >
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
         </div>
 
         <div
@@ -81,17 +84,6 @@ export default function Navbar() {
                 {item.label}
               </Link>
             ))}
-            <div className="pt-4 space-y-2">
-              <Button
-                variant="ghost"
-                className="w-full justify-start text-gray-700 dark:text-gray-300"
-              >
-                {t("login")}
-              </Button>
-              <Button className="w-full bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white">
-                {t("getStarted")}
-              </Button>
-            </div>
           </div>
         </div>
       </div>

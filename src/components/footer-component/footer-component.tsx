@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, Heart, Linkedin, Mail, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 

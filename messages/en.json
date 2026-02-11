@@ -1,4 +1,12 @@
 {
+  "Layout": {
+    "title": "NextJS Boilerplate",
+    "description": "Production-ready Next.js boilerplate with internationalization, theming, Docker support, CI/CD and best practices built-in.",
+    "ogDescription": "Kickstart your Next.js projects with a scalable, production-ready foundation."
+  },
+  "Home": {
+    "description": "Production-ready Next.js boilerplate with internationalization, theming, Docker support, CI/CD and best practices built-in."
+  },
   "Navbar": {
     "titlenavbar": "NextJS Boilerplate",
     "language": "Language",
