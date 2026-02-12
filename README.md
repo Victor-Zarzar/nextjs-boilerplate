@@ -110,8 +110,8 @@ npx create-next-app my-app --example https://github.com/Victor-Zarzar/nextjs-boi
 > {
 >   "scripts": {
 >     "test": "npm test",
->     "test:watch": "npm test -- --watch",
->     "test:update": "npm test -- --update-snapshots",
+>     "test:watch": "npm test --watch",
+>     "test:update": "npm test --update-snapshots",
 >     "prod": "npm run build && npm run start"
 >   }
 > }
@@ -120,11 +120,8 @@ npx create-next-app my-app --example https://github.com/Victor-Zarzar/nextjs-boi
 ### 1. Clone or Use as Template
 
 ```bash
-# Clone the repository
-git clone https://github.com/yourusername/nextjs-boilerplate
+git clone https://github.com/Victor-Zarzar/nextjs-boilerplate
 cd nextjs-boilerplate
-
-# Or use GitHub's "Use this template" button
 ```
 
 ### 2. Install Dependencies
