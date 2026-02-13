@@ -1,12 +1,14 @@
 import { describe, expect, test } from "bun:test";
 
-function forceServerRuntime() {
-  delete (globalThis as any).window;
-  delete (globalThis as any).document;
-  delete (globalThis as any).navigator;
+function forceServerRuntime(): void {
+  const g = globalThis as Record<string, unknown>;
+
+  delete g.window;
+  delete g.document;
+  delete g.navigator;
 }
 
-async function importFreshEnv() {
+async function importFreshEnv(): Promise<typeof import("../src/env.mjs")> {
   return import(`../src/env.mjs?test=${crypto.randomUUID()}`);
 }
 

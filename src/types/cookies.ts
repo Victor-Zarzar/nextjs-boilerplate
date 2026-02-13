@@ -1,5 +1,5 @@
 export type CookieConsentProps = {
   demo?: boolean;
-  onAcceptCallback?: () => void;
-  onDeclineCallback?: () => void;
+  onAcceptAction?: () => void;
+  onDeclineAction?: () => void;
 };
