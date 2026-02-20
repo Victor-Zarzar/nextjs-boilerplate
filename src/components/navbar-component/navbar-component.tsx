@@ -1,11 +1,11 @@
 "use client";
 import { LanguagesIcon, Menu, X } from "lucide-react";
-import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 import LangToggler from "@/components/language-selector/language-selector";
 import ToggleButton from "@/components/toggle-mode/toggle-mode";
 import { Button } from "@/components/ui/button";
+import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 
 export default function Navbar() {
