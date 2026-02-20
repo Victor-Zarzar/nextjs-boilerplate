@@ -1,8 +1,8 @@
 "use client";
 
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
-import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import type { FooterLink, FooterSection, SocialLink } from "@/types/footer";
 
 export type FooterLinks = Record<FooterSection, FooterLink[]>;
