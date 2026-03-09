@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
 
-export default async function AboutPage() {
-  const t = await getTranslations("AboutPage");
+export default async function PrivacyPolicyPage() {
+  const t = await getTranslations("PrivacyPolicy");
 
   return (
     <div className="mx-auto mt-20 text-center">

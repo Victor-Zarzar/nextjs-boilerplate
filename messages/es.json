@@ -29,6 +29,10 @@
     "login": "Iniciar sesión",
     "getStarted": "Comenzar"
   },
+  "AboutPage": {
+    "title": "Acerca de",
+    "description": "Esta página presenta más información sobre nuestra empresa, proyecto o propósito"
+  },
   "Footer": {
     "description": "Crea aplicaciones web modernas con nuestro boilerplate de Next.js. Rápido, escalable y listo para producción.",
     "product": "Producto",
@@ -66,5 +70,9 @@
     "title": "Algo salió mal",
     "description": "Ocurrió un error inesperado al cargar esta página. No te preocupes — ya hemos sido notificados y puedes continuar navegando con normalidad.",
     "return-home": "Volver a la página principal"
+  },
+  "PrivacyPolicy": {
+    "title": "Política de Privacidad",
+    "description": "Esta página explica cómo recopilamos, usamos y protegemos su información al utilizar nuestro sitio web"
   }
 }

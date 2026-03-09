@@ -2,6 +2,11 @@
   "name": "nextjs-boilerplate",
   "version": "1.0.0",
   "private": true,
+  "author": "victorzarzar (https://github.com/Victor-Zarzar)",
+  "repository": "https://github.com/Victor-Zarzar/nextjs-boilerplate",
+  "bugs": {
+    "url": "https://github.com/Victor-Zarzar/nextjs-boilerplate/issues"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -13,7 +18,8 @@
     "test": "bun test",
     "test:watch": "bun test --watch",
     "test:update": "bun test --update-snapshots",
-    "prod": "bun run build && bun run start"
+    "prod": "bun run build && bun run start",
+    "clean": "rm -rf node_modules .next"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

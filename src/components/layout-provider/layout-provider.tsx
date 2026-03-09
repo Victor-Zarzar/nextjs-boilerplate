@@ -35,7 +35,7 @@ export default function LayoutProvider({
     <>
       <ThemeProvider enableSystem={true} attribute="class">
         <Navbar />
-        {children}
+        <main className="min-h-screen">{children}</main>
         <Toaster position="top-right" expand={true} />
         {hasConsented && <Analytics />}
         <SpeedInsights />
