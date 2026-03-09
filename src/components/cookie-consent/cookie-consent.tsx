@@ -1,10 +1,10 @@
 "use client";
 import { CookieIcon, X } from "lucide-react";
-import Link from "next/link";
 import { useTranslations } from "next-intl";
 import React, { useState } from "react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
+import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import type { CookieConsentProps } from "@/types/cookies";
 

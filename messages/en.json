@@ -29,6 +29,10 @@
     "login": "Login",
     "getStarted": "Get Started"
   },
+  "AboutPage": {
+    "title": "About",
+    "description": "This page provides more information about our company, project, or purpose"
+  },
   "Footer": {
     "description": "Build modern web applications with our Next.js boilerplate. Fast, scalable, and production-ready.",
     "product": "Product",
@@ -66,5 +70,9 @@
     "title": "Something went wrong",
     "description": "An unexpected error occurred while loading this page. Don't worry — we've been notified and you can continue browsing normally.",
     "return-home": "Back to home page"
+  },
+  "PrivacyPolicy": {
+    "title": "Privacy Policy",
+    "description": "This page explains how we collect, use, and protect your information when you use our website"
   }
 }

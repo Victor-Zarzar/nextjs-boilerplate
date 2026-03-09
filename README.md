@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  Production-ready Next.js boilerplate with internationalization, theming, Docker support, and best practices built-in.
+    Next.js boilerplate with internationalization, theming, Docker support, and best practices built-in. Not production-ready yet — use as a starting point for your own project.
 </p>
 
 ---
