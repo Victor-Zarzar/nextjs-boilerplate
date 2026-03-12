@@ -1,4 +1,5 @@
 "use client";
+
 import { LanguagesIcon, Menu, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useState } from "react";

@@ -7,6 +7,11 @@
   "Home": {
     "description": "Boilerplate de Next.js listo para producción con internacionalización, soporte para temas, Docker, CI/CD y mejores prácticas integradas."
   },
+  "Manifest": {
+    "name": "NextJS Boilerplate",
+    "shortName": "Boilerplate",
+    "description": "Comienza tus proyectos Next.js con una base escalable y preparada para producción."
+  },
   "Navbar": {
     "titlenavbar": "NextJS Boilerplate",
     "language": "Idioma",
