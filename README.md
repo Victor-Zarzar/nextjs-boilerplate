@@ -372,25 +372,29 @@ Add your tests in the `tests/` directory or colocate them with your components.
 
 ---
 
-<h2 id="contributing">
-  Contributing
-</h2>
-
-Contributions are welcome! Please feel free to submit a Pull Request.
+<h2 id="contributing">Contributing</h2>
 
 1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
 5. Open a Pull Request
+
+Report issues at: https://github.com/Victor-Zarzar/nextjs-boilerplate/issues
 
 ---
 
-<h2 id="license">
-  License
-</h2>
+<h2 id="license">License</h2>
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+<h2 id="author">Author</h2>
+
+Victor Zarzar - [@Victor-Zarzar](https://github.com/Victor-Zarzar)
+
+Project Link: [https://github.com/Victor-Zarzar/nextjs-boilerplate](https://github.com/Victor-Zarzar/nextjs-boilerplate)
 
 ---
 
