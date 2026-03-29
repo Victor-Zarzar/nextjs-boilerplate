@@ -47,7 +47,16 @@ test: build
 		-v /app/node_modules \
 		-w /app \
 		$(DOCKER_IMAGE_NAME):$(DOCKER_TAG) \
-		bun run test
+		bun run test:unit
+
+test-e2e: build
+	docker run --rm \
+		--name $(DOCKER_CONTAINER_NAME)-test \
+		-v $(PWD):/app \
+		-v /app/node_modules \
+		-w /app \
+		$(DOCKER_IMAGE_NAME):$(DOCKER_TAG) \
+		sh -c "bun install --frozen-lockfile && bunx playwright install --with-deps chromium webkit && bun run test:e2e"
 
 help:
 	@echo ""
@@ -65,7 +74,8 @@ help:
 	@echo "  make build            Build the Docker image"
 	@echo "  make run              Run the Docker container"
 	@echo "  make stop             Stop and remove the container"
-	@echo "  make test             Run the automated tests (Isolated Docker container)"
+	@echo "  make test-unit        Run the automated tests (Isolated Docker container)"
+	@echo "  make test-e2e         Run the end-to-end tests (Isolated Docker container)"
 	@echo "  make clean            Remove image and clean environment"
 	@echo "  make logs             Show container logs"
 	@echo "  make shell            Access container shell"
