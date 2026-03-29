@@ -18,9 +18,25 @@
 
 ---
 
-<h2 id="stack">
-  Tech Stack
-</h2>
+<h2 id="table-of-contents">Table of Contents</h2>
+
+- [Tech Stack](#stack)
+- [Key Features](#features)
+- [Prerequisites](#prerequisites)
+- [Installation & Setup](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Customization](#customization)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
+- [License](#license)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
+
+---
+
+<h2 id="stack">Tech Stack</h2>
 
 <p>
 <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/HTML.svg" width="48" title="HTML5"> 
@@ -55,15 +71,13 @@
 
 ---
 
-<h2 id="features">
-  Key Features
-</h2>
+<h2 id="features">Key Features</h2>
 
 **Production-Ready** - Optimized configuration for deployment  
 **Internationalization** - Built-in multi-language support  
 **Theme Support** - Light/Dark mode with easy customization  
 **Component Library** - Pre-configured Shadcn UI components  
-**Docker Support** - Dockerfile for testing and deployment local
+**Docker Support** - Dockerfile for testing and deployment local  
 **Fast Development** - Bun for lightning-fast package management  
 **Type Safety** - Full TypeScript configuration  
 **Testing Ready** - Bun test runner configured  
@@ -72,9 +86,7 @@
 
 ---
 
-<h2 id="prerequisites">
-  Prerequisites
-</h2>
+<h2 id="prerequisites">Prerequisites</h2>
 
 Before starting, ensure you have the following installed:
 
@@ -86,9 +98,7 @@ Before starting, ensure you have the following installed:
 
 ---
 
-<h2 id="installation">
-  Installation & Setup
-</h2>
+<h2 id="installation">Installation & Setup</h2>
 
 ### Quick Start
 
@@ -162,9 +172,7 @@ The application will be available at `http://localhost:3000`
 
 ---
 
-<h2 id="usage">
-  Usage
-</h2>
+<h2 id="usage">Usage</h2>
 
 ### Available Commands
 
@@ -188,22 +196,6 @@ Build and run in production mode locally:
 
 ```bash
 make prod
-```
-
-### Running Tests
-
-Execute the test suite:
-
-```bash
-make test
-```
-
-Or with Bun:
-
-```bash
-bun test
-bun test --watch          # Watch mode
-bun test --update         # Update snapshots
 ```
 
 ### Code Quality
@@ -251,38 +243,30 @@ Remove containers, images, and build artifacts:
 make clean
 ```
 
----
+#### Run the automated tests (Isolated Docker container)
 
-<h2 id="makefile-commands">
-  Makefile Commands Reference
-</h2>
+```bash
+make test-unit
+```
 
-| Command        | Description                                                                 |
-| -------------- | --------------------------------------------------------------------------- |
-| `make install` | Install dependencies using bun                                              |
-| `make dev`     | Run the app locally in development mode                                     |
-| `make prod`    | Run the app in production mode (Mode Build Prod - Test local - Preview)     |
-| `make build`   | Build the Docker image                                                      |
-| `make run`     | Build and run the Docker container (Docker Run + Build - Development local) |
-| `make test`    | Run the automated tests (Isolated Docker container)                         |
-| `make stop`    | Stop and remove the container                                               |
-| `make clean`   | Remove image and clean environment                                          |
-| `make logs`    | Show container logs in real-time                                            |
-| `make shell`   | Access container shell                                                      |
-| `make help`    | Display all available commands                                              |
+```bash
+make test-e2e
+```
 
 ---
 
-<h2 id="project-structure">
-  Project Structure
-</h2>
+<h2 id="project-structure">Project Structure</h2>
 
 ```
 nextjs-boilerplate/
 ├── .github/                        # GitHub configuration
+│   ├── actions/                    # Reusable actions
+│   │   └── setup-project/          # Project setup action
+│   │       └── action.yaml
 │   ├── workflows/                  # GitHub Actions workflows
-│   │   ├── main.yaml               # CI/CD pipeline
-│   │   └── codeql-analysis.yaml    # Code security analysis
+│   │   ├── ci.yaml                 # CI pipeline
+│   │   ├── codeql-analysis.yaml    # Code security analysis
+│   │   └── release.yaml            # Release automation
 │   └── dependabot.yml              # Dependency updates configuration
 ├── app/                            # Next.js App Router
 │   ├── [locale]/                   # Internationalization routes
@@ -306,9 +290,7 @@ nextjs-boilerplate/
 
 ---
 
-<h2 id="customization">
-  Customization
-</h2>
+<h2 id="customization">Customization</h2>
 
 ### Adding Components
 
@@ -334,9 +316,29 @@ Add your environment variables to `.env` file. Use the `@t3-oss/env-nextjs` pack
 
 ---
 
-<h2 id="deployment">
-  Deployment
-</h2>
+<h2 id="testing">Testing</h2>
+
+This boilerplate uses Bun's built-in test runner with React Testing Library:
+
+```bash
+# Run all units
+bun test:unit
+
+# Run all e2e
+bun test:e2e
+
+# Watch mode
+bun test --watch
+
+# Update snapshots
+bun test --update-snapshots
+```
+
+Add your tests in the `tests/` directory or colocate them with your components.
+
+---
+
+<h2 id="deployment">Deployment</h2>
 
 ### Vercel (Recommended)
 
@@ -349,26 +351,8 @@ The easiest way to deploy your Next.js app is using Vercel:
 3. Configure environment variables
 4. Deploy!
 
----
-
-<h2 id="testing">
-  Testing
-</h2>
-
-This boilerplate uses Bun's built-in test runner with React Testing Library:
-
-```bash
-# Run all tests
-bun test
-
-# Watch mode
-bun test --watch
-
-# Update snapshots
-bun test --update-snapshots
-```
-
-Add your tests in the `tests/` directory or colocate them with your components.
+- **CI/CD Pipeline** - `.github/workflows/` with `ci.yaml`, `codeql-analysis.yaml` and `release.yaml` for automated checks, security analysis and releases
+- **Dependabot** - Monthly dependency updates for GitHub Actions and Pub packages
 
 ---
 
@@ -398,9 +382,7 @@ Project Link: [https://github.com/Victor-Zarzar/nextjs-boilerplate](https://gith
 
 ---
 
-<h2 id="acknowledgments">
-  Acknowledgments
-</h2>
+<h2 id="acknowledgments">Acknowledgments</h2>
 
 - [Next.js](https://nextjs.org/) - The React Framework
 - [Shadcn UI](https://ui.shadcn.com/) - Component library
