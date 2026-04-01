@@ -3,7 +3,7 @@ PROJECT_NAME= NextJS Boilerplate
 DOCKER_IMAGE_NAME = nextjs-boilerplate
 DOCKER_CONTAINER_NAME = nextjs-boilerplate
 PORT = 3000
-DOCKER_TAG = 1.1.0
+DOCKER_TAG = $(shell node -p "require('./package.json').version")
 
 install:
 	bun install
@@ -40,7 +40,7 @@ logs:
 shell:
 	docker exec -it $(DOCKER_CONTAINER_NAME) sh
 
-test: build
+test-unit: build
 	docker run --rm \
 		--name $(DOCKER_CONTAINER_NAME)-test \
 		-v $(PWD):/app \

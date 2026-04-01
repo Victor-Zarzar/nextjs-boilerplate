@@ -1,7 +1,8 @@
 "use client";
 
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { MdOutlineEmail } from "react-icons/md";
 import { Link } from "@/i18n/navigation";
 import type { FooterLink, FooterSection, SocialLink } from "@/types/footer";
 
@@ -32,10 +33,14 @@ export default function Footer() {
   };
 
   const socialLinks: SocialLink[] = [
-    { href: "https://github.com", icon: Github, label: "GitHub" },
-    { href: "https://twitter.com", icon: Twitter, label: "Twitter" },
-    { href: "https://linkedin.com", icon: Linkedin, label: "LinkedIn" },
-    { href: "mailto:contact@example.com", icon: Mail, label: "Email" },
+    { href: "https://github.com", icon: FaGithub, label: "GitHub" },
+    { href: "https://twitter.com", icon: FaTwitter, label: "Twitter" },
+    { href: "https://linkedin.com", icon: FaLinkedin, label: "LinkedIn" },
+    {
+      href: "mailto:contact@example.com",
+      icon: MdOutlineEmail,
+      label: "Email",
+    },
   ];
 
   return (
