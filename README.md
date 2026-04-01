@@ -204,6 +204,7 @@ Check code quality with Biome:
 
 ```bash
 bun run lint              # Check for issues
+bun run lint:fix          # Format errors code
 bun run format            # Format code
 ```
 
