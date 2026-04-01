@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.0](https://github.com/Victor-Zarzar/nextjs-boilerplate/compare/v1.1.0...v1.2.0) (2026-04-01)
+
+
+### Features
+
+* update deps and layout ([c229e45](https://github.com/Victor-Zarzar/nextjs-boilerplate/commit/c229e4538ce52845e7df9c1fa2be64667aa30496))
+* update deps and layout ([8b1b425](https://github.com/Victor-Zarzar/nextjs-boilerplate/commit/8b1b425e4971fb1c54eacc8cb8851c06134d26ca))
+
 ## [1.1.0](https://github.com/Victor-Zarzar/nextjs-boilerplate/compare/v1.0.0...v1.1.0) (2026-03-31)
 
 
