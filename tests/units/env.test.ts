@@ -37,5 +37,6 @@ describe("env.mjs loading .env", () => {
 
     expect(env.NODE_ENV).toBeTruthy();
     expect(env.NEXT_PUBLIC_WEBSITE_URL).toBeTruthy();
+    expect(env.NEXT_PUBLIC_DISABLE_DEVTOOLS).toBeTruthy();
   });
 });

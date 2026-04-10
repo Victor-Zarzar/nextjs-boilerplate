@@ -79,5 +79,9 @@
   "PrivacyPolicy": {
     "title": "Política de Privacidad",
     "description": "Esta página explica cómo recopilamos, usamos y protegemos su información al utilizar nuestro sitio web"
+  },
+  "Unauthorized": {
+    "title": "Acceso denegado",
+    "p": "No tienes permiso para acceder a esta página."
   }
 }
