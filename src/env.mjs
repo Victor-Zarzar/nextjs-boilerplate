@@ -18,11 +18,21 @@ const env = createEnv({
         }
         return url.startsWith("http") ? url : `https://${url}`;
       }),
+
+    NEXT_PUBLIC_DISABLE_DEVTOOLS: z
+      .union([z.string(), z.boolean()])
+      .transform((value) => {
+        if (typeof value === "boolean") {
+          return value;
+        }
+        return value === "true";
+      }),
   },
 
   runtimeEnv: {
     NODE_ENV: process.env.NODE_ENV,
     NEXT_PUBLIC_WEBSITE_URL: process.env.NEXT_PUBLIC_WEBSITE_URL,
+    NEXT_PUBLIC_DISABLE_DEVTOOLS: process.env.NEXT_PUBLIC_DISABLE_DEVTOOLS,
   },
 
   skipValidation: !!process.env.SKIP_ENV_VALIDATION,

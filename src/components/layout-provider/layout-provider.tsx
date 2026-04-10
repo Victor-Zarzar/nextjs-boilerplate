@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import CookieConsentComponent from "@/components/cookie-consent/cookie-consent";
 import { Toaster } from "@/components/ui/sonner";
 import Footer from "../footer-component/footer-component";
+import DevToolsGuard from "../guard/disable-dev-tools";
 import Navbar from "../navbar-component/navbar-component";
 
 export default function LayoutProvider({
@@ -16,6 +17,10 @@ export default function LayoutProvider({
   children: React.ReactNode;
 }) {
   const [hasConsented, setHasConsented] = useState(false);
+  const scriptProps =
+    typeof window === "undefined"
+      ? undefined
+      : ({ type: "application/json" } as const);
 
   useEffect(() => {
     if (document.cookie.includes("cookieConsent=true")) {
@@ -33,12 +38,19 @@ export default function LayoutProvider({
 
   return (
     <>
-      <ThemeProvider enableSystem={true} attribute="class">
+      <ThemeProvider
+        scriptProps={scriptProps}
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
+      >
         <Navbar />
         <main className="min-h-screen">{children}</main>
         <Toaster position="top-right" expand={true} />
         {hasConsented && <Analytics />}
         <SpeedInsights />
+        <DevToolsGuard />
         <CookieConsentComponent
           onAcceptAction={handleAccept}
           onDeclineAction={handleDecline}
