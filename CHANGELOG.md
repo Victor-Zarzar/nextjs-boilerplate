@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.0](https://github.com/Victor-Zarzar/nextjs-boilerplate/compare/v1.2.0...v1.3.0) (2026-04-10)
+
+
+### Features
+
+* add new test and update architecture this project. ([fa954ef](https://github.com/Victor-Zarzar/nextjs-boilerplate/commit/fa954ef45b9198f9585d6a49191680037adf77be))
+* add new test and update architecture this project. ([d5cfc87](https://github.com/Victor-Zarzar/nextjs-boilerplate/commit/d5cfc87f2e9b9d94ad0706e163e250bab9acb557))
+
 ## [1.2.0](https://github.com/Victor-Zarzar/nextjs-boilerplate/compare/v1.1.0...v1.2.0) (2026-04-01)
 
 
