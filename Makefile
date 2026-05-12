@@ -5,8 +5,14 @@ DOCKER_CONTAINER_NAME = nextjs-boilerplate
 PORT = 3000
 DOCKER_TAG = $(shell node -p "require('./package.json').version")
 
+check:
+	bun run check
+
 install:
 	bun install
+
+install-e2e:
+	bunx playwright install
 
 dev: install
 	bun run dev
@@ -66,6 +72,7 @@ help:
 	@echo "Local Commands:"
 	@echo "  make install          Install dependencies using bun"
 	@echo "  make dev              Run the app locally in development mode"
+	@echo "  make check            Run typecheck, lint, and typegen"
 	@echo ""
 	@echo "Production Commands:"
 	@echo "  make prod             Run the app in production mode (Test local)"
